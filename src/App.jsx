@@ -6,6 +6,8 @@ import MovieListPage from "./pages/MovieListPage/MovieListPage";
 import MovieDetailPage from "./pages/MovieDetail/MovieDetailPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 function App() {
   return (

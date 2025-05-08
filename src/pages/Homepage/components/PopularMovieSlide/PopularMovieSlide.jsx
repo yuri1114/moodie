@@ -1,11 +1,11 @@
 import React from "react";
-import { usePopularMoivesQuery } from "../../../../hooks/usePopularMovies";
+import { useMovieListQuery } from "../../../../hooks/useMovieList";
 
 import style from "./PopularMovieSlide.module.scss";
 import MovieSlide from "../../../../common/MovieSlider/MovieSlide";
 
 const PopularMovieSlide = () => {
-  const { data, isLoading, isError, error } = usePopularMoivesQuery();
+  const { data, isLoading, isError, error } = useMovieListQuery("popular");
 
   if (isLoading) return <p>Loading . . . </p>;
   if (isError) return <p>{error.message}</p>;
