@@ -1,0 +1,49 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+h1 {
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+.gnb {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  cursor: pointer;
+  li {
+    font-size: 1rem;
+    line-height: 150%;
+    color: #fff;
+  }
+}
+
+// .searchBar {
+//   display: flex;
+//   align-items: center;
+//   gap: 0.625rem;
+//   border: 1px solid #ccc;
+//   border-radius: 0.5rem;
+//   padding: 0.5rem 1rem;
+
+//   .icon {
+//     width: 1.75rem;
+//     height: 1.75rem;
+//     background: url(../assets/imgs/search-icon.png) no-repeat center / 100% 100%;
+//     flex-shrink: 0;
+//   }
+// }
