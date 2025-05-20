@@ -105,7 +105,6 @@ select:focus {
   white-space: pre-line;
 }
 
-
 .swiper-pagination-progressbar-fill {
   background-color: #ff4d4f !important;
 }
@@ -136,6 +135,9 @@ select:focus {
   }
 }
 
+.mySwiper {
+  width: 100%;
+}
 
 ::-webkit-scrollbar {
   width: 8px;

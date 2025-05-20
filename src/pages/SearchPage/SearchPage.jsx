@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./SearchPage.module.scss";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import MovieCard from "../../common/MovieCard/MovieCard";
 import { useSearchMovieQuery } from "../../hooks/useSearchMovieQuery";
+import SearchCard from "../../common/SearchCard/SearchCard";
 
 const SearchPage = () => {
   const navigate = useNavigate();
@@ -33,6 +33,7 @@ const SearchPage = () => {
           />
         </div>
       </div>
+
       <div className={styles.pageLayout}>
         <div className={styles.inner}>
           {isLoading ? (
@@ -40,15 +41,18 @@ const SearchPage = () => {
           ) : isError ? (
             <p>에러 발생</p>
           ) : !data?.results || data.results.length === 0 ? (
-            <p className="empty-message">검색 결과가 없습니다.</p>
+            <p className={styles.emptyMessage}>검색 결과가 없습니다.</p>
           ) : (
             data.results
               .filter((movie) => movie.poster_path)
               .map((movie) => (
                 <div className={styles.listCard}>
-                  <div className={styles.cardContainer}>
-                    <MovieCard key={movie.id} movie={movie} type="search" />
-                  </div>
+                  <SearchCard
+                    className={styles.searchCard}
+                    key={movie.id}
+                    movie={movie}
+                    type="search"
+                  />
                 </div>
               ))
           )}

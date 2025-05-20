@@ -15,7 +15,7 @@ const MovieDetailPage = () => {
   if (isError) return <p>{error.message}</p>;
 
   return (
-    <div>
+    <div className={style.layout}>
       <div className={style.poster}>
         {data.backdrop_path ? (
           <img

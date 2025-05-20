@@ -15,6 +15,17 @@ const MovieSlide = ({ type, movies, title }) => {
       <Swiper
         spaceBetween={20}
         slidesPerView={5.3}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.2,
+          },
+          768: {
+            slidesPerView: 3.3,
+          },
+          1024: {
+            slidesPerView: 4.5,
+          },
+        }}
         modules={[Navigation, Pagination]}
         navigation
         pagination={{ type: "progressbar" }}

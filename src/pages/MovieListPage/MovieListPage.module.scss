@@ -16,3 +16,14 @@
 .listCard {
   width: calc((100% - 5rem) / 5);
 }
+
+@media screen and (max-width: 1024px) {
+  .listCard {
+    width: calc(50% - 0.625rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  .listCard {
+    width: 100%;
+  }
+}

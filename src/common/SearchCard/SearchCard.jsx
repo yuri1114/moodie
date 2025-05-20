@@ -1,7 +1,8 @@
-import styles from "./MovieCard.module.scss";
+import React from "react";
 import { useNavigate } from "react-router-dom";
+import styles from "./SearchCard.module.scss";
 
-const MovieCard = ({ movie, type }) => {
+const SearchCard = ({ movie, type }) => {
   const navigate = useNavigate();
 
   const goMovieDetail = () => {
@@ -9,7 +10,6 @@ const MovieCard = ({ movie, type }) => {
   };
 
   if (!movie) return null;
-
   return (
     <div className={styles.movieCard} onClick={goMovieDetail}>
       <div className={styles.imgWrap}>
@@ -29,4 +29,4 @@ const MovieCard = ({ movie, type }) => {
   );
 };
 
-export default MovieCard;
+export default SearchCard;
