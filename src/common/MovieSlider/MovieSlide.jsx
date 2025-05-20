@@ -7,14 +7,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const MovieSlide = ({ title, movies }) => {
+const MovieSlide = ({ type, movies, title }) => {
   return (
     <div className={style.populrWrapper}>
-      <h3>{title}</h3>
+      <p className={style.title}>{title}</p>
 
       <Swiper
         spaceBetween={20}
-        slidesPerView={4.3}
+        slidesPerView={5.3}
         modules={[Navigation, Pagination]}
         navigation
         pagination={{ type: "progressbar" }}
@@ -22,7 +22,7 @@ const MovieSlide = ({ title, movies }) => {
       >
         {movies.map((movie, index) => (
           <SwiperSlide key={index}>
-            <MovieCard movie={movie} />
+            <MovieCard movie={movie} type={type} />
           </SwiperSlide>
         ))}
       </Swiper>

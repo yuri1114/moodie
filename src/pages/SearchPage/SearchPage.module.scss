@@ -1,0 +1,49 @@
+.pageLayout {
+  display: flex;
+  justify-content: center;
+  padding: 6.25rem 1.875rem;
+}
+
+.searchArea {
+  width: 31.25rem;
+  border-bottom: 1px solid #fff;
+  margin: 0 auto;
+}
+.container {
+  width: 100%;
+
+  padding: 6.25rem 1.875rem;
+}
+
+.inner {
+  width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.list {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  width: 64rem;
+}
+
+.listCard {
+  width: calc((100% - 5rem) / 5);
+}
+
+.icon {
+  width: 2.375rem;
+  min-width: 2.375rem;
+  height: 2.375rem;
+  background: url(../../assets/imgs/search-icon.png) no-repeat center / 1.75rem
+    1.75rem;
+}
+
+.searchBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}

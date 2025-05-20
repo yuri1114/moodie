@@ -1,0 +1,30 @@
+.reviewCard {
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.875rem;
+}
+.btnArea {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .moreBtn {
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 5px;
+    &:hover {
+      background: #fff;
+      transition: all 0.5s;
+      color: #333;
+    }
+  }
+}

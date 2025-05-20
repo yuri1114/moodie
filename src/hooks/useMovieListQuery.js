@@ -3,7 +3,6 @@ import api from "../utils/api";
 
 const endPointMap = {
   popular: "/movie/popular",
-  "now-playing": "/movie/now_playing",
   "top-rated": "/movie/top_rated",
   upcoming: "/movie/upcoming",
 };

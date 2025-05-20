@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from "react";
 import Banner from "./components/Banner/Banner";
-import PopularMovieSlide from "./components/PopularMovieSlide/PopularMovieSlide";
 import style from "./HomePage.module.scss";
+import MovieSection from "./components/MovieSection/MovieSection";
 
-//1. 배너- top popular movie 첫번째 아이템 보여주기
-//2. popular movie
-//3. top rated movie
-//4. upcoming movie
 const HomePage = () => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(true);
+    }, 600);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div>
+    <div className={`${style.pageEnter} ${visible ? style.active : ""}`}>
       <Banner scrollY={scrollY} />
-      <PopularMovieSlide />
+      <MovieSection type="popular" title="Popular" />
+      <MovieSection type="top-rated" title="Top Rated" />
+      <MovieSection type="upcoming" title="Upcoming" />
     </div>
   );
 };

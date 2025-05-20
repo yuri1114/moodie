@@ -1,28 +1,14 @@
 .banner {
   width: 100%;
-
-  height: 80vh;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 5.6875rem;
   margin-bottom: 50px;
-  padding: 0 1.25rem 1.875rem;
-}
-
-.position {
-  width: 64rem;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 2.8125rem;
-  height: 100%;
+  padding: 0 20px;
+  position: relative;
 }
 
 .imgContainer {
-  min-width: 70%;
-  height: 100%;
+  width: 100%;
+  // height: 100vh;
   img {
     width: 100%;
     height: 100%;
@@ -31,7 +17,14 @@
 }
 
 .text {
-  h3 {
-    font-size: 3vw;
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+
+  p {
+    font-size: 4vw;
+    font-style: italic;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   }
 }

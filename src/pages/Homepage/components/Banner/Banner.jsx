@@ -1,9 +1,9 @@
 import React from "react";
-import { usePopularMoivesQuery } from "../../../../hooks/usePopularMovies";
-import style from "./Banner.module.scss";
+import { useMovieListQuery } from "../../../../hooks/useMovieListQuery";
+import styles from "./Banner.module.scss";
 
 const Banner = () => {
-  const { data, isLoading, isError, error } = usePopularMoivesQuery();
+  const { data, isLoading, isError, error } = useMovieListQuery();
 
   if (isLoading) return <h1>Loading . . .</h1>;
   if (isError) return <h1>{error.message}</h1>;
@@ -13,18 +13,15 @@ const Banner = () => {
   const randomMovie = data.results[randomIndex];
 
   return (
-    <div className={style.banner}>
-      <div className={style.position}>
-        <div className={style.imgContainer}>
-          <img
-            src={`https://image.tmdb.org/t/p/w1280${randomMovie?.poster_path}`}
-            alt="Movie Poster"
-          />
-        </div>
-        <div className={style.text}>
-          <h3>{randomMovie?.title}</h3>
-          <p>{randomMovie?.overview}</p>
-        </div>
+    <div className={styles.banner}>
+      <div className={styles.imgContainer}>
+        <img
+          src={`https://image.tmdb.org/t/p/original${randomMovie?.backdrop_path}`}
+          alt="Movie Poster"
+        />
+      </div>
+      <div className={styles.text}>
+        <p>{randomMovie?.title}</p>
       </div>
     </div>
   );

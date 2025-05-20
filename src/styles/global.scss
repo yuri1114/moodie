@@ -105,13 +105,6 @@ select:focus {
   white-space: pre-line;
 }
 
-// .swiper-pagination-progressbar {
-//   height: 5px !important;
-//
-//   bottom: 0;
-//   top: unset;
-//   width: 100% !important;
-// }
 
 .swiper-pagination-progressbar-fill {
   background-color: #ff4d4f !important;
@@ -143,37 +136,7 @@ select:focus {
   }
 }
 
-// @media screen and (max-width: 1024px) {
-//   .mySwiper {
-//     height: 50vh;
-//     padding-bottom: 4rem;
-//   }
 
-//   .swiper-button-prev,
-//   .swiper-button-next {
-//     bottom: 3.5rem !important;
-//   }
-
-//   .swiper-pagination-progressbar {
-//     bottom: 2rem !important;
-//   }
-// }
-
-// @media screen and (max-width: 768px) {
-//   .mySwiper {
-//     height: 45vh;
-//     padding-bottom: 3rem;
-//   }
-
-//   .swiper-button-prev,
-//   .swiper-button-next {
-//     bottom: 2.5rem !important;
-//   }
-
-//   .swiper-pagination-progressbar {
-//     bottom: 1.5rem !important;
-//   }
-// }
 ::-webkit-scrollbar {
   width: 8px;
 }

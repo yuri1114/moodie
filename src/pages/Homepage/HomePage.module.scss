@@ -1,0 +1,16 @@
+.pageEnter {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.loaderWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
